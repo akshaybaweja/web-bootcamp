@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Random Photo Collage</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #overlay {
+            position: fixed;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        #text {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            font-size: 70px;
+            font-family: 'Fredericka the Great', cursive;
+            color: white;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .container {
+            width: 1680px;
+            height: 1080px;
+            float: left;
+        }
+
+        img {
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: none;
+            float: left;
+        }
+
+        .b-col {
+            float: left;
+            width: 560px;
+            height: 1080px;
+        }
+
+        .m-col {
+            float: left;
+            width: 560px;
+            height: 540px;
+        }
+
+        .s-col {
+            float: left;
+            width: 560px;
+            height: 540px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overlay" onclick="toggle()">
+        <div id="text">LIVE TODAY.<br>LOVE TOMORROW.<br>UNITE FOREVER.</div>
+    </div>
+
+    <div class="container">
+        <div class="b-col">
+            <div class="s-col">
+                <img src="https://source.unsplash.com/280x540/?life" />
+                <img src="https://source.unsplash.com/280x540/?tomorrowland" />
+            </div>
+            <div class="m-col">
+                <img src="https://source.unsplash.com/560x540/?photography" />
+            </div>
+        </div>
+
+        <div class="b-col">
+            <img src="https://source.unsplash.com/560x1080/?festival" />
+        </div>
+        <div class="b-col">
+            <div class="m-col">
+                <img src="https://source.unsplash.com/560x540/?lights" />
+            </div>
+            <div class="s-col">
+                <img src="https://source.unsplash.com/280x540/?dance" />
+                <img src="https://source.unsplash.com/280x540/?water,sports" />
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function toggle() {
+        if (document.getElementById("overlay").style.display == "none")
+            document.getElementById("overlay").style.display = "block"
+        else
+            document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
+</html>
