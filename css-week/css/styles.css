@@ -54,23 +54,24 @@ body {
         transform: translate3d(0, 5px, 0);
     }
 }
-
+ 
 .sun-icon {
     width: 20%;
     position: absolute;
     margin: 2% 2% auto;
     display: block;
     animation: rotate 10s 0s linear infinite;
-    fill: #fd7c4f;
     transition: all .4s;
-    z-index: 5;
+    z-index: 3;
 }
 
-.sun-icon .ray,
+ .sun-icon .ray,
 .circle {
+    fill: #fd7c4f;
     stroke: #fd7c4f;
     transition: all .4s;
 }
+
 
 @keyframes rotate {
     0% {
@@ -107,8 +108,9 @@ body {
     font-size: 4em;
 }
 
+
 .bird {
-    background-image: url(http://www.iamramraj.com/demo/Flying_birds_CSS_animation_examples/bird-cells.svg);
+    background-image: url(../assets/bird-cells.svg);
     background-size: auto 100%;
     width: 88px;
     height: 125px;
@@ -181,15 +183,15 @@ body {
 .bird-container--three {
     -webkit-animation-duration: 14.6s;
     animation-duration: 14.6s;
-    -webkit-animation-delay: 9.5s;
-    animation-delay: 9.5s;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
 }
 
 .bird-container--four {
     -webkit-animation-duration: 16s;
     animation-duration: 16s;
-    -webkit-animation-delay: 10.25s;
-    animation-delay: 10.25s;
+    -webkit-animation-delay: 5.25s;
+    animation-delay: 5.25s;
 }
 
 @-webkit-keyframes fly-cycle {
@@ -303,107 +305,5 @@ body {
         opacity: 1;
         -webkit-transform: translateY(0vh) scale(0.6);
         transform: translateY(0vh) scale(0.6);
-    }
-}
-
-@-webkit-keyframes fly-right-two {
-    0% {
-        left: -10%;
-        opacity: 1;
-        -webkit-transform: translateY(-2vh) scale(0.5);
-        transform: translateY(-2vh) scale(0.5);
-    }
-
-    10% {
-        left: 10%;
-        -webkit-transform: translateY(0vh) scale(0.4);
-        transform: translateY(0vh) scale(0.4);
-    }
-
-    20% {
-        left: 30%;
-        -webkit-transform: translateY(-4vh) scale(0.6);
-        transform: translateY(-4vh) scale(0.6);
-    }
-
-    30% {
-        left: 50%;
-        -webkit-transform: translateY(1vh) scale(0.45);
-        transform: translateY(1vh) scale(0.45);
-    }
-
-    40% {
-        left: 70%;
-        -webkit-transform: translateY(-2.5vh) scale(0.5);
-        transform: translateY(-2.5vh) scale(0.5);
-    }
-
-    50% {
-        left: 90%;
-        -webkit-transform: translateY(0vh) scale(0.45);
-        transform: translateY(0vh) scale(0.45);
-    }
-
-    51% {
-        left: 110%;
-        -webkit-transform: translateY(0vh) scale(0.45);
-        transform: translateY(0vh) scale(0.45);
-    }
-
-    100% {
-        left: 110%;
-        -webkit-transform: translateY(0vh) scale(0.45);
-        transform: translateY(0vh) scale(0.45);
-    }
-}
-
-@keyframes fly-right-two {
-    0% {
-        left: -10%;
-        opacity: 1;
-        -webkit-transform: translateY(-2vh) scale(0.5);
-        transform: translateY(-2vh) scale(0.5);
-    }
-
-    10% {
-        left: 10%;
-        -webkit-transform: translateY(0vh) scale(0.4);
-        transform: translateY(0vh) scale(0.4);
-    }
-
-    20% {
-        left: 30%;
-        -webkit-transform: translateY(-4vh) scale(0.6);
-        transform: translateY(-4vh) scale(0.6);
-    }
-
-    30% {
-        left: 50%;
-        -webkit-transform: translateY(1vh) scale(0.45);
-        transform: translateY(1vh) scale(0.45);
-    }
-
-    40% {
-        left: 70%;
-        -webkit-transform: translateY(-2.5vh) scale(0.5);
-        transform: translateY(-2.5vh) scale(0.5);
-    }
-
-    50% {
-        left: 90%;
-        -webkit-transform: translateY(0vh) scale(0.45);
-        transform: translateY(0vh) scale(0.45);
-    }
-
-    51% {
-        left: 110%;
-        -webkit-transform: translateY(0vh) scale(0.45);
-        transform: translateY(0vh) scale(0.45);
-    }
-
-    100% {
-        left: 110%;
-        -webkit-transform: translateY(0vh) scale(0.45);
-        transform: translateY(0vh) scale(0.45);
     }
 }
