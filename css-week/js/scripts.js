@@ -21,7 +21,7 @@ function showPosition(position) {
         document.getElementById("description").innerHTML = data.weather[0].main;
         document.getElementById("container-bg").style.background = "url(" + encodeURI('https://source.unsplash.com/1920x1080/?' + "New York landmark") + ")";
         
-        if (data.dt < data.sys.sunset) {
+        if (data.dt > data.sys.sunset) {
             document.body.classList.add("body-night");
             document.getElementById("weather-data").style.color = "white";
             
