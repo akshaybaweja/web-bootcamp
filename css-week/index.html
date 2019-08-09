@@ -14,12 +14,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="sun">
+    <div class="container">   
+        <div id="container-bg"></div>  
+        <div id="sun">
             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px"
                 viewBox="0 0 43.4 43.4" enable-background="new 0 0 43.4 43.4" xml:space="preserve">
-                <circle class="circle" fill="none" stroke="#252223" stroke-width="2" stroke-miterlimit="10" cx="21.7"
-                    cy="21.5" r="12.6" />
+                <circle class="circle" id="innerCircle" fill="none" stroke="#252223" stroke-width="2" stroke-miterlimit="10" cx="21.7"
+                    cy="21.5" r="12.6"/>
                 <line class="ray" fill="none" stroke="#252223" stroke-width="2" stroke-miterlimit="10" x1="21.7"
                     y1="6.3" x2="21.7" y2="0" />
                 <line class="ray" fill="none" stroke="#252223" stroke-width="2" stroke-miterlimit="10" x1="21.7"
@@ -55,10 +56,10 @@
             </svg>
         </div>
         
-        <div class="weather-data">
+        <div id = "weather-data" class="weather-data">
             <div id="location">New York</div>
             <div id="description">Partly Cloudy</div>
-            <div id="tempreature">86°</div>
+            <div id="tempreature">84°</div>
         </div>
 
         <div id="clouds">
@@ -67,6 +68,9 @@
             <div class="cloud x3"></div>
             <div class="cloud x4"></div>
             <div class="cloud x5"></div>
+            <div class="cloud x6"></div>
+            <div class="cloud x7"></div>
+            <div class="cloud x8"></div>
         </div>
 
         <div class="bird-container bird-container--one">
@@ -89,5 +93,7 @@
     </div>
 
 </body>
+
+<script src="./js/scripts.js"></script>
 
 </html>

@@ -4,6 +4,7 @@ body {
 }
 
 body {
+    /* background: radial-gradient(ellipse at center, #85D8CE 0%,#85D8CE 35%, #085078 100%); */
     background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
     overflow: hidden;
 }
@@ -54,7 +55,21 @@ body {
         transform: translate3d(0, 5px, 0);
     }
 }
- 
+
+#sun {
+    display: block;
+}
+
+#container-bg{
+    background: url("https://source.unsplash.com/1920x1080/?New%20York%20landmark");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
 .sun-icon {
     width: 20%;
     position: absolute;
@@ -64,13 +79,12 @@ body {
     transition: all .4s;
 }
 
- .sun-icon .ray,
+.sun-icon .ray,
 .circle {
-    fill: #fd7c4f;
-    stroke: #fd7c4f;
+    fill: #F9D423;
+    stroke: #e65c00;
     transition: all .4s;
 }
-
 
 @keyframes rotate {
     0% {
@@ -93,6 +107,7 @@ body {
     margin-top: 20px;
     margin-right: 20px;
     z-index: 5;
+    color: black;
 }
 
 #tempreature {
@@ -311,40 +326,48 @@ body {
     }
 }
 
-#clouds{
-	padding: 100px 0;
+#clouds {
+    padding: 100px 0;
     z-index: -2;
 }
 
 /*Time to finalise the cloud shape*/
 .cloud {
-	width: 200px; height: 60px;
-	background: #fff;
-	
-	border-radius: 200px;
-	-moz-border-radius: 200px;
-	-webkit-border-radius: 200px;
-	
-	position: relative; 
+    width: 200px;
+    height: 60px;
+    background: #fff;
+
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+
+    position: relative;
 }
 
-.cloud:before, .cloud:after {
-	content: '';
-	position: absolute; 
-	background: #fff;
-	width: 100px; height: 80px;
-	position: absolute; top: -15px; left: 10px;
-	
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	
-	-webkit-transform: rotate(30deg);
-	transform: rotate(30deg);
+.cloud:before,
+.cloud:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
 }
 
 .cloud:after {
-	width: 120px; height: 120px;
-	top: -55px; left: auto; right: 15px;
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
 }
 
 /*Time to animate*/
@@ -355,13 +378,14 @@ body {
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
 .x2 {
-	left: 200px;
-	
-	-webkit-transform: scale(0.6);
-	transform: scale(0.6);
-	opacity: 0.6; /*opacity proportional to the size*/
-	
-	/*Speed will also be proportional to the size and opacity*/
+    left: 200px;
+
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6;
+    /*opacity proportional to the size*/
+
+    /*Speed will also be proportional to the size and opacity*/
     /*More the speed. Less the time in 's' = seconds*/
     animation: moveclouds 25s linear infinite;
     -webkit-animation: moveclouds 25s linear infinite;
@@ -369,44 +393,103 @@ body {
 }
 
 .x3 {
-	left: -250px; top: -200px;
-	
-	-webkit-transform: scale(0.8);
-	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
-	animation: moveclouds 20s linear infinite;
+    left: -250px;
+    top: -200px;
+
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    animation: moveclouds 20s linear infinite;
     -webkit-animation: moveclouds 20s linear infinite;
     z-index: -2;
 }
 
 .x4 {
-	left: 470px; top: -250px;
-	
-	-webkit-transform: scale(0.75);
-	transform: scale(0.75);
-	opacity: 0.75; /*opacity proportional to the size*/
-	animation: moveclouds 18s linear infinite;
+    left: 470px;
+    top: -250px;
+
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.75;
+    /*opacity proportional to the size*/
+    animation: moveclouds 18s linear infinite;
     -webkit-animation: moveclouds 18s linear infinite;
     z-index: -2;
 }
 
 .x5 {
-	left: -150px; top: -150px;
-	
-	-webkit-transform: scale(0.8);
-	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
-	animation: moveclouds 20s linear infinite;
+    left: -150px;
+    top: -150px;
+
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    animation: moveclouds 20s linear infinite;
     -webkit-animation: moveclouds 20s linear infinite;
     z-index: -2;
 }
 
+.x6 {
+    left: 750px;
+    top: -250px;
+
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    animation: moveclouds 20s linear infinite;
+    -webkit-animation: moveclouds 20s linear infinite;
+    z-index: -2;
+}
+
+.x7 {
+    left: -50px;
+    top: -100px;
+
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    animation: moveclouds 13s linear infinite;
+    -webkit-animation: moveclouds 13s linear infinite;
+    z-index: -2;
+}
+
+.x8 {
+    left: 100px;
+    top: -300px;
+
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6;
+    /*opacity proportional to the size*/
+    animation: moveclouds 22s linear infinite;
+    -webkit-animation: moveclouds 22s linear infinite;
+    z-index: -2;
+}
+
 @keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+    0% {
+        margin-left: 1000px;
+    }
+
+    100% {
+        margin-left: -1000px;
+    }
 }
 
 @-webkit-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+    0% {
+        margin-left: 1000px;
+    }
+
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+.body-night{
+    background: radial-gradient(ellipse at center, #ad5389 0%, #ad5389 25%, #3c1053 100%);
 }
