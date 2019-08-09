@@ -61,7 +61,8 @@ body {
 }
 
 #container-bg{
-    background: url("https://source.unsplash.com/1920x1080/?New%20York%20landmark");
+    /* https://source.unsplash.com/1920x1080/?New%20York%20landmark */
+    background: url("");
     position: absolute;
     top: 0;
     left: 0;
